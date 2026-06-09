@@ -1,0 +1,433 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria/"
+     xml:base="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#SeOfertaEn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#SeOfertaEn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#esParteDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#esParteDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#esParteDe"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#ConceptoGeografico"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#esParteDe"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Barrio"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#esVecinoDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#esVecinoDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#esVecinoDe"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Barrio"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#esVecinoDe"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Barrio"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#gestionaAviso -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#gestionaAviso">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#tieneAgenteResponsable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#ofreceInmueble -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#ofreceInmueble">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#ofreceInmueble"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Aviso"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#ofreceInmueble"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Inmueble"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#publicaAviso -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#publicaAviso">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#publicadoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#publicadoPor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#publicadoPor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Aviso"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#publicadoPor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Organizacion"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#tieneAgenteResponsable -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#tieneAgenteResponsable">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#tieneAgenteResponsable"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Aviso"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#tieneAgenteResponsable"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Agente"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#tieneServicio -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#tieneServicio">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#tieneServicio"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Inmueble"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#tieneServicio"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Servicio"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#ubicadoEnBarrio -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#ubicadoEnBarrio">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#ubicadoEnBarrio"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Inmueble"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#ubicadoEnBarrio"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Barrio"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#anchoTerreno -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#anchoTerreno">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Lote"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#cantidadHabitaciones -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#cantidadHabitaciones">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Casa"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#direccionPostal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#direccionPostal">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Inmueble"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#largoTerreno -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#largoTerreno">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Lote"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#latitud -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#latitud">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Inmueble"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#longitud -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#longitud">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Inmueble"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#monedaValor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#monedaValor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Aviso"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#montoValor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#montoValor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Aviso"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#superficieCubierta -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#superficieCubierta">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Casa"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Agente -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Agente">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Persona"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Aviso -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Aviso"/>
+    
+
+
+    <!-- http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Barrio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Barrio">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#ConceptoGeografico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Casa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Casa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Inmueble"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#CasasBaratasDeGonnet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#CasasBaratasDeGonnet"/>
+    
+
+
+    <!-- http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#ConceptoGeografico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#ConceptoGeografico"/>
+    
+
+
+    <!-- http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Inmobiliaria -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Inmobiliaria">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Organizacion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Inmueble -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Inmueble"/>
+    
+
+
+    <!-- http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Lote -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Lote">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Inmueble"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Organizacion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Organizacion"/>
+    
+
+
+    <!-- http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Persona -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Persona"/>
+    
+
+
+    <!-- http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Servicio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/teofi/ontologies/2026/3/oferta-inmobiliaria#Servicio"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
