@@ -8,7 +8,7 @@ Hay diferentes puntos claves que debe resolver el diseño e implementación de l
 
 - **¿Que dominio va a cubrir esta ontología?**. El dominio es el del mercado de la oferta inmobiliaria, donde se hará foco particular en dos tipos de inmuebles, que son `casas` y `lotes`. La ontología va a abarcar tanto características físicas como técnicas de los inmuebles con la información comercial de los avisos (precios, inmobiliarias, agentes, etc).
 - **¿Para que vamos a usar esta ontología?**. Para construir una base de conocimiento que nos permita organizar, visualizar y consultar de forma estructurada la oferta inmobiliaria. Todo esto con el fin de facilitar el emparejamiento entre las necesidades de un cliente y los avisos disponibles en el mercado.
-- **¿Quienes van a usar y mantener la ontología?. En este caso esta hecja con fines didácticos, pero en un caso real los potenciales clientes en busca de viviendas serian los usuarios y los que la mantengan serían los agentes inmobiliarios que actualizan avisos y valores.
+- **¿Quienes van a usar y mantener la ontología?**. En este caso esta hecja con fines didácticos, pero en un caso real los potenciales clientes en busca de viviendas serian los usuarios y los que la mantengan serían los agentes inmobiliarios que actualizan avisos y valores.
 
 Algo que se plantea en el articulo de protegé es realizar preguntas de competencia a modo de "prueba de fuego" con el fin de determinar si la ontología tiene suficiente detalle. Basándome en el enunciado de la actividad propuesta la ontología debería responder las siguientes preguntas que las organizo en diferentes secciones:
 
@@ -32,7 +32,7 @@ La jerarquía de clases que se propone es la siguiente:
 
 - `Inmueble`: Clase raíz
     - `Casa` es sublclase de `Inmueble`. Es un tipo de inmueble que posee habitaciones y superficie cubierta.
-    - `Lote` es subclase de `Inmueble`. Serías terrenos baldíos definidos por sus dimensiones.
+    - `Lote` es subclase de `Inmueble`. Serían terrenos baldíos definidos por sus dimensiones.
 - `Aviso`: Representa la publicación comercial del inmueble, vinculando valor, inmobiliaria y agente.
 - `Organizacion`:
     - `Inmobiliaria`: subclase de `Organizacion`. Sería la empresa que publica los avisos.
@@ -73,14 +73,14 @@ Para este paso vamos a dividir las propiedades en *relaciones entre clases* y *a
 ### Datatype properties
 - Propiedades de `Inmueble`:
     - `direccionPostal`: Tipo `String`
-    - `latitud` y `longitud`: Tipo `Float`
+    - `latitud` y `longitud`: Tipo `decimal`
 - Propiedades específicas de `Casa`
     - `cantidadHabitaciones`: Tipo `Integer`
     - `superficieCubierta`: Tipo `Integer`
 - Propiedades específicas de `Lote`
-    - `largoTerreno` y `anchoTerreno`: Tipo `Integer`
+    - `ladoLote` : Tipo `decimal`
 - Propiedades de `Aviso`
-    - `montoValor`: Tipo `Float`
+    - `montoValor`: Tipo `decimal`
     - `monedaValor`: Tipo `String` (EJ: USD, ARS)
 
 ## Paso 6: Definir las facetas de las propiedades
@@ -89,7 +89,7 @@ Para este paso vamos a dividir las propiedades en *relaciones entre clases* y *a
 - **Cardinalidad Múltiple (Multiple Cardinality)**: `tieneServicio`, `publicaAviso`
 ### Tipos de valor
 - **String**: `direccionPostal`
-- **Float**: `latitud`, `longitud`, `montoValor`, `largoTerreno`, `anchoTerreno`
+- **Decimal**: `latitud`, `longitud`, `montoValor`, `largoTerreno`, `anchoTerreno`
 - **Integer**: `cantidadHabitaciones`, `superficieCubierta`
 - **Enumerated**: para `monedaValor` podemos restringir los valores permitidos a por ejemplo `{USD, ARS}`
 - **Instance**: `ubicadoEnBarrio`, `tieneAgenteResponsable`
@@ -100,6 +100,6 @@ Para este paso vamos a dividir las propiedades en *relaciones entre clases* y *a
 - `ofreceInmueble` (Aviso -> Inmueble) es inversa de `SeOfertaEn` (Inmueble -> Aviso)
 
 ### Valores por defecto
-Se podría setear como valor por defecto "USD" para `monedaValor`, ya que usualmente en los avisos publican el precio en dolares (?
+Se podría setear como valor por defecto "USD" para `monedaValor`, ya que usualmente en los avisos publican el precio en dolares.
 
 ## Paso 7: Crear instancias
